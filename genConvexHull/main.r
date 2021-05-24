@@ -1,0 +1,5 @@
+ch <- read.csv("completeCH.csv",header=TRUE, colClasses=c("numeric","numeric"))
+wp <- read.csv("workPoints_100.csv",header=TRUE, colClasses=c("numeric","numeric"))
+plot(c(1, 100), c(-100,100), type="n", lwd=3)
+polygon(ch$x, ch$y, col = "#1b98e0")
+points(wp$x, wp$y, cex = 1, pch = 15)
